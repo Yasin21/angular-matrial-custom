@@ -13,10 +13,8 @@
 export declare const FAKE_SVGS: {
     cat: string;
     dog: string;
-    dogWithSpaces: string;
     farmSet1: string;
     farmSet2: string;
     farmSet3: string;
-    farmSet4: string;
     arrows: string;
 };
