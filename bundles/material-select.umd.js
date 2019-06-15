@@ -1246,7 +1246,7 @@ var MatSelect = /** @class */ (function (_super) {
         var changedOrDestroyed = rxjs.merge(this.options.changes, this._destroy);
         this.optionSelectionChanges.pipe(operators.takeUntil(changedOrDestroyed)).subscribe(function (event) {
             _this._onSelect(event.source, event.isUserInput);
-            if (event.isUserInput && !_this.multiple && _this._panelOpen) {
+            if (event.isUserInput && _this._panelOpen) {
                 _this.close();
                 _this.focus();
             }

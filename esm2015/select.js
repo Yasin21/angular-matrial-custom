@@ -979,7 +979,7 @@ class MatSelect extends _MatSelectMixinBase {
         const changedOrDestroyed = merge(this.options.changes, this._destroy);
         this.optionSelectionChanges.pipe(takeUntil(changedOrDestroyed)).subscribe(event => {
             this._onSelect(event.source, event.isUserInput);
-            if (event.isUserInput && !this.multiple && this._panelOpen) {
+            if (event.isUserInput && this._panelOpen) {
                 this.close();
                 this.focus();
             }
